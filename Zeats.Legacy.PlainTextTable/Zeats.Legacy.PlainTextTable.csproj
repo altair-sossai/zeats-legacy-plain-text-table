@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2CD32378-C47E-4CB3-9848-9BEDB0C0B4FC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Zeats.Legacy.PlainTextTable</RootNamespace>
+    <AssemblyName>Zeats.Legacy.PlainTextTable</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Zeats.Legacy.StringExtensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zeats.Legacy.StringExtensions.1.0.0.16\lib\net45\Zeats.Legacy.StringExtensions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enums\HeightType.cs" />
+    <Compile Include="Enums\HorizontalAlign.cs" />
+    <Compile Include="Enums\VerticalAlign.cs" />
+    <Compile Include="Enums\WidthType.cs" />
+    <Compile Include="Extensions\GridDefinitionColumnsBreaksExtensions.cs" />
+    <Compile Include="Extensions\GridDefinitionColumnSizeExtensions.cs" />
+    <Compile Include="Extensions\GridDefinitionExtensions.cs" />
+    <Compile Include="Extensions\GridDefinitionRowsBreaksExtensions.cs" />
+    <Compile Include="Extensions\GridDefinitionRowSizeExtensions.cs" />
+    <Compile Include="Extensions\GridRenderExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\TableExtensions.cs" />
+    <Compile Include="Grid\BorderDefinition.cs" />
+    <Compile Include="Grid\CellDefinition.cs" />
+    <Compile Include="Grid\ColumnDefinition.cs" />
+    <Compile Include="Grid\GridDefinition.cs" />
+    <Compile Include="Grid\RowDefinition.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Render\CellRender.cs" />
+    <Compile Include="Render\GridRender.cs" />
+    <Compile Include="Styles\IBorderStyle.cs" />
+    <Compile Include="Styles\Types\AllBordersStyle.cs" />
+    <Compile Include="Styles\Types\BottomBorderStyle.cs" />
+    <Compile Include="Styles\Types\HeaderBorderStyle.cs" />
+    <Compile Include="Styles\Types\InsideBordersStyle.cs" />
+    <Compile Include="Styles\Types\InsideHorizontalBorderStyle.cs" />
+    <Compile Include="Styles\Types\InsideVerticalBorderStyle.cs" />
+    <Compile Include="Styles\Types\LeftBorderStyle.cs" />
+    <Compile Include="Styles\Types\NoBorderStyle.cs" />
+    <Compile Include="Styles\Types\OutsideBordersStyle.cs" />
+    <Compile Include="Styles\Types\RightBorderStyle.cs" />
+    <Compile Include="Styles\Types\TopBorderStyle.cs" />
+    <Compile Include="Styles\Types\WhiteSpaceBorderStyle.cs" />
+    <Compile Include="Styles\Types\WhiteSpaceVerticalBorderStyle.cs" />
+    <Compile Include="ValueObjects\Interval.cs" />
+    <Compile Include="ValueObjects\TableInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".nuspec" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
